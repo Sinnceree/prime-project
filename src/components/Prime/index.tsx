@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 
 const Prime = () => {
-  const [inputNumber, setInputNumber] = useState<number>(1)
+  const [inputNumber, setInputNumber] = useState<number>(0)
+  const [gridArr, setGridArr] = useState<number[]>([])
+  const [primeNumber, setPrimeNumber] = useState<number | null>(null)
 
   // This is a recursive function checking the value starting
   // from the input value and subtracting by one until we find
@@ -31,8 +33,22 @@ const Prime = () => {
 
   const checkInput = (value: number) => {
     const primeNum = isNumberPrime(value)
-    console.log(primeNum)
+
+    if (value !== 1 || value !< 1) {
+      const numArr: number[] = []
+      for (let i=0; i < value; i++) {
+        numArr.push(i+1)
+      }
+      setGridArr(numArr)
+    }
+
+    setPrimeNumber(primeNum)
   }
+
+  const onInputChange = (value: number) => {
+    setInputNumber(value)
+  }
+
 
   return (
     <div className="prime-box">
@@ -42,8 +58,14 @@ const Prime = () => {
         placeholder="0" 
         type="number" 
         value={inputNumber} 
-        onChange={(e) => setInputNumber(parseInt(e.target.value))} />
+        onChange={(e) => onInputChange(parseInt(e.target.value))} />
       <button onClick={() => checkInput(inputNumber)}>Check</button>
+
+      <div className="prime-grid">
+        {gridArr.map((num) => (
+          <div key={num} className="node" style={{ background: num === primeNumber ? "#a0ff8b" : "transparent" }}>{num}</div>
+        ))}
+      </div>
     </div>
   )
 }
