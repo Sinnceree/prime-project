@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Prime = () => {
+  const [inputNumber, setInputNumber] = useState<number>(1)
 
   // This is a recursive function checking the value starting
   // from the input value and subtracting by one until we find
@@ -37,8 +38,12 @@ const Prime = () => {
     <div className="prime-box">
       <h1 className="info">Find Nearst Prime Number</h1>
       <p className="description">Enter a value below and we will find the highest prime number lower than your input.</p>
-      <input placeholder="0" type="number" />
-      <button onClick={() => checkInput(55)}>Check</button>
+      <input 
+        placeholder="0" 
+        type="number" 
+        value={inputNumber} 
+        onChange={(e) => setInputNumber(parseInt(e.target.value))} />
+      <button onClick={() => checkInput(inputNumber)}>Check</button>
     </div>
   )
 }
