@@ -1,3 +1,6 @@
+# Live Version
+https://voxze.github.io/prime-project/
+
 # Design Decision
 I went with a basic design to make it easy for the user to see exactly what is going on and why.
 The user has a brief title telling them what's the point of the specific website they're on and an input field.
