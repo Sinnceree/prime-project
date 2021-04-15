@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 
 const Prime = () => {
   const [inputNumber, setInputNumber] = useState<number>(0)
@@ -32,6 +32,9 @@ const Prime = () => {
     return value
   }
 
+  // Ran when the user clicks submit button
+  // We get the initial value from input start checking for lower primes
+  // And then we generate the grid to display to the user which prime number they got.
   const checkInput = (value: number) => {
     const primeNum = isNumberPrime(value)
 
@@ -53,11 +56,6 @@ const Prime = () => {
     setPrimeNumber(primeNum)
   }
 
-  const onInputChange = (value: number) => {
-    setInputNumber(value)
-  }
-
-
   return (
     <div className="prime-box">
       <h1 className="info">Find Nearst Prime Number</h1>
@@ -66,7 +64,7 @@ const Prime = () => {
         placeholder="0" 
         type="number" 
         value={inputNumber} 
-        onChange={(e) => onInputChange(parseInt(e.target.value))} />
+        onChange={(e) => setInputNumber(parseInt(e.target.value))} />
       <button onClick={() => checkInput(inputNumber)}>Check</button>
       {messageStatus && <p className="status">{messageStatus}</p>}
 
