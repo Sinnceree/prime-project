@@ -36,7 +36,7 @@ const Prime = () => {
   // We get the initial value from input start checking for lower primes
   // And then we generate the grid to display to the user which prime number they got.
   const checkInput = (value: number) => {
-    const primeNum = isNumberPrime(value)
+    const primeNum = isNumberPrime(value-1)
 
     if (value !== 1 || value !< 1) {
       const numArr: number[] = []
