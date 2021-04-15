@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/prime-project/static/css/main.aa847f75.chunk.css",
+    "main.js": "/prime-project/static/js/main.414e278e.chunk.js",
+    "main.js.map": "/prime-project/static/js/main.414e278e.chunk.js.map",
+    "runtime-main.js": "/prime-project/static/js/runtime-main.82d0c276.js",
+    "runtime-main.js.map": "/prime-project/static/js/runtime-main.82d0c276.js.map",
+    "static/js/2.863aedf1.chunk.js": "/prime-project/static/js/2.863aedf1.chunk.js",
+    "static/js/2.863aedf1.chunk.js.map": "/prime-project/static/js/2.863aedf1.chunk.js.map",
+    "static/js/3.13563f00.chunk.js": "/prime-project/static/js/3.13563f00.chunk.js",
+    "static/js/3.13563f00.chunk.js.map": "/prime-project/static/js/3.13563f00.chunk.js.map",
+    "index.html": "/prime-project/index.html",
+    "static/css/main.aa847f75.chunk.css.map": "/prime-project/static/css/main.aa847f75.chunk.css.map",
+    "static/js/2.863aedf1.chunk.js.LICENSE.txt": "/prime-project/static/js/2.863aedf1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82d0c276.js",
+    "static/js/2.863aedf1.chunk.js",
+    "static/css/main.aa847f75.chunk.css",
+    "static/js/main.414e278e.chunk.js"
+  ]
+}
